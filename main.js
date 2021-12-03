@@ -3,7 +3,7 @@ let humanChoice = prompt('Do you choose rock, paper or scicors? ');
 //Since the computer can't choose one it's own, the program will generate a random choice
 let computerChoice = random_choice()
 //Calling the function that compares the two choices, and prints the winner
-compareChoices(humanChoice, computerChoice)
+compareChoices(humanChoice.toLowerCase(), computerChoice)
 
 function random_choice(){
     options = ['rock', 'paper', 'scisors']
@@ -46,7 +46,7 @@ function compareChoices(human, computer) {
 }   
 
 function show_winner (winner) {
-    console.log('Human chose', humanChoice)
+    console.log('Human chose', humanChoice.toLowerCase())
     console.log('Computer chose', computerChoice)
     console.log('The winner is:', winner)
 }
